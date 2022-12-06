@@ -548,6 +548,53 @@
         <button class="close-modal-btn" data-modal-close type="button">
           ✖
         </button>
+
+        <form class="modal-form">
+          <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
+
+          <div class="modal-form-field">
+            <label class="modal-field-label" for="name">Ім'я</label>
+            <input
+              class="modal-field-input"
+              type="text"
+              name="name"
+              id="name"
+            />
+          </div>
+
+          <div class="modal-form-field">
+            <label class="modal-field-label" for="tel">Телефон</label>
+            <input class="modal-field-input" type="text" name="tel" id="tel" />
+          </div>
+
+          <div class="modal-form-field">
+            <label class="modal-field-label" for="email">Пошта</label>
+            <input
+              class="modal-field-input"
+              type="text"
+              name="email"
+              id="email"
+            />
+          </div>
+
+          <label class="modal-field-label" for="comment">Коментар</label>
+          <textarea
+            class="comment"
+            name="comment"
+            id="comment"
+            placeholder="Введіть текст"
+          ></textarea>
+
+          <label class="field-policy">
+            <input class="checkbox" type="checkbox" name="policy" />
+            <span class="policy"
+              >Погоджуюся з розсилкою та приймаю
+              <a class="policy-link" href="#">Умови договору</a></span
+            >
+          </label>
+
+          <button class="btn modal-form-btn" type="submit">Відправити</button>
+        </form>
       </div>
     </div>
 

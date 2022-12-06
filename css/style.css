@@ -13,6 +13,8 @@
   --icon-backround-color: #f5f4fa;
   --duration: 250ms;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --text-color-form: rgba(117, 117, 117, 0.5);
+  --primary-color: #212121;
 }
 
 body {
@@ -583,7 +585,7 @@ img {
 
 .project-item:hover .project-overlay,
 .project-item:focus .project-overlay {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 .project-thumb {
@@ -633,12 +635,14 @@ img {
   transform: translate(-50%, -50%) scale(0.9);
 }
 
+/* Modal */
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
   min-width: 528px;
   min-height: 581px;
+  padding: 40px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -661,7 +665,113 @@ img {
   cursor: pointer;
 }
 
+/* Form */
+.modal-form-field {
+  position: relative;
+
+  margin-bottom: 10px;
+}
+
+.modal-title {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-color);
+}
+
+.modal-field-label {
+  display: block;
+  margin-bottom: 4px;
+
+  color: var(--primary-text-color);
+}
+
+.modal-field-label,
+.modal-field-input,
+.comment,
+.comment::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+.modal-field-input {
+  display: block;
+  padding: 11px 12px 11px 42px;
+  height: 40px;
+}
+
+.modal-field-input,
+.comment {
+  width: 100%;
+
+  color: var(--text-color-form);
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: outline var(--duration) var(--timing-function);
+}
+
+.modal-field-input:focus,
+.comment:focus {
+  outline: 1px solid var(--accent-color);
+}
+
+/* .modal-field-icon {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+
+  fill: var(--icons-bg-color);
+
+  pointer-events: none;
+
+  transition: fill var(--duration) var(--timing-function);
+}
+
+.modal-field-input:focus + .modal-field-icon {
+  fill: var(--accent-color);
+} */
+
+.name {
+  margin-top: 100px;
+}
+
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+}
+
+.comment {
+  display: block;
+  padding: 12px 16px;
+  height: 120px;
+  margin-bottom: 20px;
+
+  resize: none;
+}
+
+.comment::placeholder {
+  color: var(--text-color-form);
+}
+
+.field-policy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.modal-form-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 52px;
 }
